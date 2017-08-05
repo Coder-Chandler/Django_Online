@@ -43,6 +43,7 @@ class Banner(models.Model):
     index = models.IntegerField(default=100, verbose_name=u"顺序")
     add_time = models.DateField(default=datetime.now, verbose_name=u"添加时间")
 
+
     class Meta:
         verbose_name = u"轮播图"
         verbose_name_plural = verbose_name
