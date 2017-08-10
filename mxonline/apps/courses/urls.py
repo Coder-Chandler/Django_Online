@@ -3,8 +3,9 @@ __author__ = 'Coder-Chandler'
 __date__ = '2017.08.09 - 16:22'
 
 from django.conf.urls import url, include
-from .views import CourseListView
+from .views import CourseListView, CourseDetailView
 urlpatterns = [
     # 课程列表页
     url(r'^list/$', CourseListView.as_view(), name='course_list'),
+    url(r'^detail/(?P<course_id>\d+)/$', CourseDetailView.as_view(), name='course_detail'),
 ]
