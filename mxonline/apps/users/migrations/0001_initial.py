@@ -34,7 +34,7 @@ class Migration(migrations.Migration):
                 ('nick_name', models.CharField(default='', max_length=50, verbose_name='\u6635\u79f0')),
                 ('birthday', models.DateField(blank=True, null=True, verbose_name='\u751f\u65e5')),
                 ('gender', models.CharField(choices=[('male', '\u7537'), ('female', '\u5973')], default='female', max_length=5)),
-                ('adress', models.CharField(default='', max_length=100)),
+                ('address', models.CharField(default='', max_length=100)),
                 ('mobile', models.CharField(blank=True, max_length=11, null=True)),
                 ('image', models.ImageField(default='image/default.png', upload_to='image/%Y/%m')),
                 ('groups', models.ManyToManyField(blank=True, help_text='The groups this user belongs to. A user will get all permissions granted to each of their groups.', related_name='user_set', related_query_name='user', to='auth.Group', verbose_name='groups')),
