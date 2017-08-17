@@ -7,7 +7,7 @@
             <div class="wp">
                 <div class="crumbs">
                     <ul>
-                        <li><a href="index.html">首页</a>></li>
+                        <li><a href="{% url 'index' %}">首页</a>></li>
                         <li><a href="course-list.html">公开课程</a>></li>
                         <li>课程详情</li>
                     </ul>
@@ -131,7 +131,7 @@
 				<div class="head">相关课程推荐</div>
                 <div class="group_recommend">
 
-                    {% for relate_course in relate_course %}
+                    {% for relate_course in relate_courses %}
                          <dl>
                             <dt>
                                 <a target="_blank" href="">
@@ -180,7 +180,7 @@
         }
 
     $('#jsLeftBtn').on('click', function(){
-        add_fav($(this), {{ course.id }}, 2);
+        add_fav($(this), {{ course.id }}, 1);
     });
 
     $('#jsRightBtn').on('click', function(){

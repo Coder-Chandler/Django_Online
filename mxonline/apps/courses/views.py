@@ -37,7 +37,7 @@ class CourseListView(View):
         except PageNotAnInteger:
             page = 1
 
-        p = Paginator(all_course, 3, request=request)
+        p = Paginator(all_course, 6, request=request)
 
         courses = p.page(page)
 
@@ -58,21 +58,22 @@ class CourseDetailView(View):
         # 增加课程点击数
         course.click_nums += 1
         course.save()
+
         has_fav_course = False
         has_fav_org = False
         if request.user.is_authenticated():
-            if UserFavorite.objects.filter(user=request.user, fav_id=course.course_org.id, fav_type=2):
+            if UserFavorite.objects.filter(user=request.user, fav_id=course.id, fav_type=1):
                 has_fav_course = True
-            if UserFavorite.objects.filter(user=request.user, fav_id=course.course_org.id, fav_type=1):
+            if UserFavorite.objects.filter(user=request.user, fav_id=course.course_org.id, fav_type=2):
                 has_fav_org = True
         tag = course.tag
         if tag:
-            relate_course = Course.objects.filter(tag=tag)[:1]
+            relate_courses = Course.objects.filter(tag=tag)[:3]
         else:
-            relate_course = []
+            relate_courses = []
         return render(request, 'course-detail.html', {
             'course': course,
-            'relate_course': relate_course,
+            'relate_courses': relate_courses,
             'has_fav_course': has_fav_course,
             'has_fav_org': has_fav_org
         })
