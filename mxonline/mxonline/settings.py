@@ -24,9 +24,9 @@ sys.path.insert(0, os.path.join(BASE_DIR, 'extra_apps'))
 SECRET_KEY = 'fhr!+arvsh9x@2mb0st*u#w-!3gt4_vrzsj9co*t3=1ijny)kp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 AUTHENTICATION_BACKENDS = (
     'users.views.CustomBackend',
@@ -95,7 +95,7 @@ DATABASES = {
         'NAME': 'mxonline',
         'USER': 'root',
         'PASSWORD': 'root',
-        'HOST': '127.0.0.1'
+        'HOST': '192.168.1.106'
     }
 }
 
@@ -150,3 +150,4 @@ EMAIL_FROM = 'artysiwgtus@sina.com'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
