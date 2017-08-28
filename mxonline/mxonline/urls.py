@@ -22,7 +22,7 @@ from django.views.generic import TemplateView
 from users.views import IndexView, LoginView, RegisterView, ActiveUserView, \
                         ForgetPwdVIew, ResetView, ModifyPwdView, LogoutView
 from organization.views import OrgView
-from mxonline.settings import MEDIA_ROOT, STATIC_ROOT
+from mxonline.settings import MEDIA_ROOT
 import xadmin
 
 urlpatterns = [
@@ -47,7 +47,7 @@ urlpatterns = [
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
 
 
-    url(r'^static/(?P<path>.*)$', serve, {'document_root': STATIC_ROOT}),
+    # url(r'^static/(?P<path>.*)$', serve, {'document_root': STATIC_ROOT}),
 
     #  课程相关的url配置
     url(r'^users/', include('users.urls', namespace='users')),

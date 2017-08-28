@@ -5,6 +5,7 @@ __date__ = '2017.08.04 - 18:14'
 import xadmin
 from .models import EmailVerifyRecord, Banner
 from xadmin import views
+from xadmin.plugins.auth import UserAdmin
 
 
 class BaseSetting(object):
