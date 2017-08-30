@@ -27,6 +27,7 @@ class CourseAdmin(object):
     exclude = ['fav_nums']
     inlines = [LessonInline, CourseResourceInline]
     # refresh_times = [3, 5] # 一定时间自动刷新
+    style_fields = {'detail': 'ueditor'}
 
     # 过滤列表中的数据
     def queryset(self):
@@ -40,9 +41,8 @@ class CourseAdmin(object):
         obj.save()
         if obj.course_org is not None:
             course_org = obj.course_org
-            course_org.course_nums = Course.objects.filter(course_org=course_org).count()
+            course_org.courses_nums = Course.objects.filter(course_org=course_org).count()
             course_org.save()
-        obj.save()
 
 
 class BannerCourseAdmin(object):

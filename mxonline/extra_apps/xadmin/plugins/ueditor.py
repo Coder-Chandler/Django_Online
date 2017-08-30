@@ -1,6 +1,6 @@
 import xadmin
 from django.db.models import TextField
-from xadmin.views import BaseAdminPlugin, CreateAdminView, ModelFormAdminView
+from xadmin.views import BaseAdminPlugin, CreateAdminView, UpdateAdminView, ModelFormAdminView
 from DjangoUeditor.models import UEditorField
 from DjangoUeditor.widgets import UEditorWidget
 from django.conf import settings
@@ -25,5 +25,10 @@ class UeditorPlugin(BaseAdminPlugin):
         return attrs
 
     def block_extrahead(self, context, nodes):
-        pass
+        js = '<script type="text/javascript" src="%s"></script>'%(settings.STATIC_URL + "ueditor/ueditor.config.js")
+        js += '<script type="text/javascript" src="%s"></script>'%(settings.STATIC_URL + "ueditor/ueditor.all.min.js")
+        nodes.append(js)
+
+xadmin.site.register_plugin(UeditorPlugin, UpdateAdminView)
+xadmin.site.register_plugin(UeditorPlugin, CreateAdminView)
 
