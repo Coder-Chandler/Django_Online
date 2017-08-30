@@ -42,6 +42,7 @@ class CourseAdmin(object):
             course_org = obj.course_org
             course_org.course_nums = Course.objects.filter(course_org=course_org).count()
             course_org.save()
+        obj.save()
 
 
 class BannerCourseAdmin(object):
