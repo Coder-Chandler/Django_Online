@@ -22,7 +22,7 @@ $(function() {
 		speed: 500,              
 		complete: function() {},  
 		keys: true,               
-		dots: false,              
+		dots: false,
 		fluid: false             
 	});
     $('.unslider-arrow2').click(function() {
