@@ -412,12 +412,12 @@ caption {
     height: 192px;
     background: #fff;
 }
-
+/*.header .top .xxx是控制用户登录后的主页图标模块*/
 .header .top {
     height: 38px;
     line-height: 38px;
-    background: #3a3a3a;
-    color: #fff;
+    background: #FFFFFF;
+    color: #FFFFFF;
     width: 100%;
 }
 
@@ -439,7 +439,6 @@ caption {
     background: #fff;
     padding: 10px;
     z-index: 99;
-    border: 1px solid #ccc;
     border-top: 0;
 }
 
@@ -450,8 +449,8 @@ caption {
 }
 
 .header .top .userdetail dt {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     overflow: hidden;
     border-radius: 50%;
     float: left;
@@ -471,7 +470,7 @@ caption {
 }
 
 .header .top .userdetail h2 {
-    color: #717171;
+    color: #000000;
 }
 
 .header .top .userdetail .btn {
@@ -487,20 +486,27 @@ caption {
     height: 30px;
     line-height: 30px;
     text-align: center;
-    background: #717171;
+    background: #FFFFFF;
     color: #fff;
 }
 
 .header .top .userdetail .btn a:hover {
-    background: #4FB137;
+    background: #000000;
+    : #FFFFFF;
 }
 
 .header .top .userdetail .btn a.fl {
-    width: 65%;
+    width: 45%;
+    color: #000000;
+    font-size: 14px;
+    font-weight: bolder;
 }
 
 .header .top .userdetail .btn a.fr {
-    width: 32%;
+    width: 22%;
+    color: #000000;
+    font-size: 14px;
+    font-weight: bolder;
 }
 
 .header .top .user {
@@ -512,8 +518,8 @@ caption {
 
 .header .top .user dt {
     margin-right: 20px;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     margin-top: 5px;
     background: #fff;
     overflow: hidden;
@@ -523,26 +529,28 @@ caption {
 
 .header .top .user dd {
     float: right;
-    color: #fff;
+    color: #000000;
+    font-weight: bold;
+    font-size: 15px;
 }
 
 .header .top .msg-num {
     float: right;
-    margin-right: 120px;
+    margin-right: -1300px;
     height: 38px;
     width: 60px;
     background: url(../images/laba.png) no-repeat 0 center;
-    padding-left: 20px;
-    color: #fff;
+    padding-left: 25px;
+    color: #000000;
 }
 
 /*login*/
 .loginbtn {
-    width: 80px;
+    width: 40px;
     height: 30px;
     line-height: 30px;
     margin-top: 4px;
-    background: #616161;
+    background: #FFFFFF;
     margin-left: 2px;
     text-align: center;
     float: left;
@@ -550,11 +558,11 @@ caption {
 }
 
 .registerbtn {
-    width: 80px;
+    width: 40px;
     height: 30px;
     line-height: 30px;
     margin-top: 4px;
-    background: #616161;
+    background: #FFFFFF;
     margin-left: 2px;
     text-align: center;
     float: left;
@@ -562,11 +570,11 @@ caption {
 }
 
 .loginbtn:hover {
-    background: #4FB137;
+    color: #4329BD;
 }
 
 .registerbtn:hover {
-    background: #4FB137;
+    color: #4329BD;
 }
 
 .dialog-open,
@@ -1296,7 +1304,7 @@ textarea:focus {
 
 /*header middle*/
 .header .middle {
-    height: 116px;
+    height: 50px;
     width: 100%;
     clear: both;
 }
@@ -1350,15 +1358,16 @@ textarea:focus {
 }
 
 .searchbox {
-    width: 460px;
-    height: 37px;
-    margin-top: 40px;
+    width: 320px;
+    height: 30px;
+    left: 50px;
+    margin-top: 60px;
     background: #F8F9F9;
 }
 
 .searchbox input {
-    width: 320px;
-    height: 37px;
+    width: 200px;
+    height: 30px;
     border: 0;
     text-indent: 10px;
     background: #F8F9F9;
@@ -1366,7 +1375,7 @@ textarea:focus {
 
 .search_btn {
     background: #F8F9F9;
-    cursor: pointer;
+    height: 30px;
 }
 
 /*.searchbox .selectContainer{margin-top: 0 !important;}*/
@@ -1378,6 +1387,7 @@ textarea:focus {
     height: 38px;
     font-size: 14px;
     width: 100%;
+    margin-top: 70px;
 }
 
 .header .nav li {
@@ -1396,6 +1406,7 @@ textarea:focus {
     position: relative;
     font-weight:bold;
     font-size: 15px;
+
 }
 
 .header .nav a:hover, .header .nav .active {
@@ -1495,11 +1506,12 @@ textarea:focus {
 
 /*banner*/
 .banner {
-    height: 476px;
-    width: 100%;
+    height: 420px;
+    width: 1500px;
     position: relative;
-    top: 0;
-    left: 0;
+    top: 1px;
+    left: -150px;
+
     /*background: #f6f6f6;*/
     /*border-bottom: 1px solid #f6f6f6;*/
     padding-top: 10px;
@@ -1507,17 +1519,19 @@ textarea:focus {
 
 /*.banner .wp{overflow: hidden;position: absolute;top:10px;left:50%;margin-left:-600px;}*/
 .banner .fl {
-    position: relative;
+    position: absolute;
     height: 478px;
-    width: 1200px;
+    width: 100%;
+    text-align: center;
 }
 
 /*焦点图 CSS*/
 .imgslide {
     height: 478px;
     width: 880px;
-    position: relative;
+    position: absolute;
     overflow: hidden;
+    text-align: center;
 }
 
 .imgslide li,
@@ -1541,39 +1555,47 @@ textarea:focus {
     height: 50px;
 }
 
-.unslider-arrow.prev,
-.unslider-arrow2.prev,
-.unslider-arrow3.prev,
-.unslider-arrow4.prev,
-.unslider-arrow5.prev {
-    left: 0;
-    background: url(../images/slide_l.png) no-repeat center center;
-}
+/*轮播图左右按钮，需要可开启*/
+/*.unslider-arrow.prev,*/
+/*.unslider-arrow2.prev,*/
+/*.unslider-arrow3.prev,*/
+/*.unslider-arrow4.prev,*/
+/*.unslider-arrow5.prev {*/
+    /*left: 0;*/
+    /*轮播图左右按钮，需要可开启*/
+    /*background: url(../images/slide_l.png) no-repeat center center;*/
+/*}*/
 
-.unslider-arrow.prev:hover,
-.unslider-arrow2.prev:hover,
-.unslider-arrow3.prev:hover,
-.unslider-arrow4.prev:hover,
-.unslider-arrow5.prev:hover {
-    background: url(../images/slide_l_1.png) no-repeat center center;
-}
+/*轮播图左右按钮，需要可开启*/
+/*.unslider-arrow.prev:hover,*/
+/*.unslider-arrow2.prev:hover,*/
+/*.unslider-arrow3.prev:hover,*/
+/*.unslider-arrow4.prev:hover,*/
+/*.unslider-arrow5.prev:hover {*/
 
-.unslider-arrow.next,
-.unslider-arrow2.next,
-.unslider-arrow3.next,
-.unslider-arrow4.next,
-.unslider-arrow5.next {
-    right: 0;
-    background: url(../images/slide_r.png) no-repeat center center;
-}
+    /*background: url(../images/slide_l_1.png) no-repeat center center;*/
+/*}*/
 
-.unslider-arrow.next:hover,
-.unslider-arrow2.next:hover,
-.unslider-arrow3.next:hover,
-.unslider-arrow4.next:hover,
-.unslider-arrow5.next:hover {
-    background: url(../images/slide_r_1.png) no-repeat center center;
-}
+/*轮播图左右按钮，需要可开启*/
+/*.unslider-arrow.next,*/
+/*.unslider-arrow2.next,*/
+/*.unslider-arrow3.next,*/
+/*.unslider-arrow4.next,*/
+/*.unslider-arrow5.next {*/
+    /*right: 0;*/
+
+    /*background: url(../images/slide_r.png) no-repeat center center;*/
+/*}*/
+
+/*轮播图左右按钮，需要可开启*/
+/*.unslider-arrow.next:hover,*/
+/*.unslider-arrow2.next:hover,*/
+/*.unslider-arrow3.next:hover,*/
+/*.unslider-arrow4.next:hover,*/
+/*.unslider-arrow5.next:hover {*/
+
+    /*background: url(../images/slide_r_1.png) no-repeat center center;*/
+/*}*/
 
 .imgslide .dots,
 .imgslide2 .dots,
@@ -1804,7 +1826,7 @@ textarea:focus {
 
 .module .eachmod {
     margin: 0;
-    padding-top: 50px;
+    padding-top: 100px;
 
 }
 

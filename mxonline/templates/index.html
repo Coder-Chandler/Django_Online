@@ -18,7 +18,7 @@
                             <li>
                                 <a href="{{ banner.url }}">
 
-                                    <img width="1200" height="478" src="{{ MEDIA_URL }}{{ banner.image }}" />
+                                    <img width="1366" height="420" src="{{ MEDIA_URL }}{{ banner.image }}" />
                                 </a>
                             </li>
                             {% endfor %}
@@ -62,8 +62,9 @@
 <!--module1 start-->
 	<section>
 		<div class="module">
+            <h1 style="text-align:center">公开课程</h1>
 			<div class="wp" >
-				<h1 style="text-align:center">公开课程</h1>
+
 				<div class="module1 eachmod">
                     <!--以下左边广告位，暂时关闭，需要再开启-->
 {#					<div class="module1_1 left">#}
@@ -114,8 +115,8 @@
 	</section>
 	<section>
 		<div class="module greybg">
+            <h1 style="text-align:center">课程机构</h1>
 			<div class="wp">
-				<h1 style="text-align:center">课程机构</h1>
 				<div class="module3 eachmod">
                     <!--以下左边广告位，暂时关闭，需要再开启-->
 {#					<div class="module3_1 left">#}
@@ -129,7 +130,7 @@
                                 <li class="{% if forloop.counter|divisibleby:'5' %}five{% endif %}">
                                     <a href="{% url 'org:org_home' org.id %}">
                                         <div class="company">
-                                            <img width="184" height="100" src="{{ MEDIA_URL }}{{ org.image }}"/>
+                                            <img width="180" height="100" src="{{ MEDIA_URL }}{{ org.image }}"/>
                                             <div class="score">
                                                 <div class="circle">
                                                     <h2>{{ org.tag }}</h2>
@@ -140,7 +141,6 @@
                                     </a>
                                 </li>
                                 {% endfor %}
-
 						</ul>
 					</div>
 				</div>
