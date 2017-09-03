@@ -328,13 +328,16 @@ caption {
 
 .sidebar li {
     float: left;
-    width: 60px;
-    height: 60px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     background: #e1e1e1;
-    margin: 5px;
+    /* margin: auto; */
     cursor: pointer;
-    position: relative;
+    position: fixed;
+    left: 50px;
+    bottom: 16px;
+    margin-left: 1250px;
 }
 
 .sidebar li a {
@@ -1309,13 +1312,17 @@ textarea:focus {
     height: 111px;
     width: 100%;
     clear: both;
-    margin-left: 500px;
+    /* margin-left: 500px; */
     /* margin-top: 0px; */
 }
 
 .header .middle .wp {
     height: 100%;
     /* background: url(../images/header_middle.png) no-repeat right 10px; */
+}
+
+.header .middle .wp .fl {
+    /* margin-left: 500px; */
 }
 
 /*select*/
@@ -1521,7 +1528,6 @@ textarea:focus {
     /* border-bottom: 1px solid #f6f6f6; */
     /* padding-top: 10px; */
     margin-left: -83px;
-    margin-top: 0px;
     padding-top: 10px;
 }
 
@@ -2390,19 +2396,19 @@ textarea:focus {
 .module6 .box {
     border: 1px solid #e3e3e3;
     width: 940px;
-    height: 430px;
+    height: 420px;
     padding: 10px;
 }
 
 .module6 .right .fl {
     width: 320px;
-    height: 430px;
+    height: 420px;
     position: relative;
     overflow: hidden;
 }
 
 .module6 .right .fl img {
-    height: 430px;
+    height: 420px;
 }
 
 .module6 .right .fl li {

@@ -323,7 +323,7 @@ class IndexView(View):
     def get(self, request):
         # 取出轮播图
         all_banners = Banner.objects.all().order_by('index')
-        courses = Course.objects.filter(is_banner=False)[:6]
+        courses = Course.objects.filter(is_banner=False)[:11]
         banner_courses = Course.objects.filter(is_banner=False)[:3]
         course_orgs = CourseOrg.objects.all()[:15]
         return render(request, 'index.html', {

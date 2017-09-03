@@ -102,12 +102,13 @@
                                         <h2 title="{{ course.name }}">{{ course.name }}</h2>
                                     </a>
                                     <span class="fl">难度：<i class="key">{{ course.get_degree_display }}</i></span>
-                                    <span class="fr">学习人数：{{ course.students }}</span>
+                                    <span class="star fr">收藏人数：{{ course.fav_nums }}</span>
+{#                                    <span class="fr">学习人数：{{ course.students }}</span>#}
                                 </div>
-                                <div class="bottom">
-                                    <span class="fl" title="{{ course.course_org.name }}">{{ course.course_org.name }}</span>
-                                    <span class="star fr">{{ course.fav_nums }}</span>
-                                </div>
+{#                                <div class="bottom">#}
+{#                                    <span class="fl" title="{{ course.course_org.name }}">{{ course.course_org.name }}</span>#}
+{#                                    <span class="star fr">{{ course.fav_nums }}</span>#}
+{#                                </div>#}
                             </div>
                             {% endfor %}
 					</div>
