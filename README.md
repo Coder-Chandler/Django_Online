@@ -1,2 +1,2 @@
 # Django_Online
-django online
+ART EDU
