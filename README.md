@@ -1,2 +1,2 @@
 # Django_Online
-ART EDU project
+ART EDU TEST
